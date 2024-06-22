@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 
 import '@/style.css'
+import '../scss/main.scss'
 import 'bootstrap/dist/css/bootstrap.css'
 import bootstrap from 'bootstrap/dist/js/bootstrap.js'
 
