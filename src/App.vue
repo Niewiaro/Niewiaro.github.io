@@ -10,6 +10,7 @@ import Navbar from '@/components/Navbar.vue'
   <link rel="manifest" href="/public/site.webmanifest">
 
   <Navbar />
+  <router-view></router-view>
   <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
@@ -19,11 +20,6 @@ import Navbar from '@/components/Navbar.vue'
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
-
-  <router-link to="/">Home</router-link>
-  <router-link to="/about">About</router-link>
-
-  <router-view></router-view>
 </template>
 
 <style scoped>
