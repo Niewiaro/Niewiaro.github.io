@@ -10,7 +10,11 @@ import Navbar from '@/components/Navbar.vue'
   <link rel="manifest" href="/public/site.webmanifest">
 
   <Navbar />
-  <router-view></router-view>
+  <router-view v-slot="{Component}">
+    <transition name="fade" mode="out-in">
+      <component :is="Component" />
+    </transition>
+  </router-view>
   <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
@@ -36,5 +40,15 @@ import Navbar from '@/components/Navbar.vue'
 
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease-out;
 }
 </style>
